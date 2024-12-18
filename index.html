@@ -3,42 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>PÁGINA INCIAL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <button id="scrollToTop">↑</button>
+    <script src="js/responsive-navbar.js"></script>
+    <script>
+        const mybutton = document.getElementById("scrollToTop");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        mybutton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" 
+            });
+        };
+    </script>
 </head>
 <body>
     <header> 
-        <h1><a href="./index.html">PÁGINA INCIAL</a></h1>
-        <nav>
-            <ul class="urlista">
+        <h1><a href="./index.html">PÁGINA INICIAL</a></h1>
+        <!-- Modificação pra revisar -->
+        <nav id="navbar-desktop">
+            <ul class="navbar-links urlista">
                 <li><a href="pages/mp.html"> MEMBRANA PLÁSMATICA</a></li>
                 <li><a href="pages/pc.html"> PAREDE CELULAR</a></li>
-                <li><a href="pages/transportes.html"> TRANSPORTES</a></li>
-                <li><a href="pages/formacao.html"> FORMAÇÃO</a></li>
             </ul>
-        </nav>  
+        </nav>
+        <nav id="navbar-mobile">
+            
+            <button class="toggle-button" onclick="toggleNavbarLinks()">☰</button>
+
+            <ul class="navbar-links" id="navbar-links-mobile">
+                <li><a href="pages/mp.html"> MEMBRANA PLÁSMATICA</a></li>
+                <li><a href="pages/pc.html"> PAREDE CELULAR</a></li>
+            </ul>
+
+        </nav>
+        <!-- Fim da modificação pra revisar --> 
     </header>
-    <div>
-        <h2>MEMBRANA PLÁSMATICA</h2>
-        <p>A membrana plasmática é uma estrutura que delimita as células e torna possíveis
-            as interações moleculares, impedindo a entrada e saída de algumas substâncias e
-            facilitando a passagem de outras. Ela é constituída por um envoltório fino presente em
-            todas as células, composta por uma bicamada fosfolipídica, proteínas e glicídios. Sua
-    </div>
-    <h3>PAREDE CELULAR</h3>
-    <p>A parede celular é uma estrutura rígida de proteção encontrada em células
-        vegetais, fungos, algas e bactérias. Sendo assim, ela é composta por polissacarídeos,
-        como celulose (nas plantas) e quitina (nos fungos) e confere forma, suporte e proteção à
-        célula. Isso porque a parede celular impede a plasmoptise, controlando a entrada de
-        água e regulando o transporte de substâncias.</p>
-        <div class="div1"><img id="imgPC" src="./imagens/celula-vegetal.jpg" alt="Parede"></div>
-        <div class="div2"><video width="250" controls> 
-          <source src="./videos/Snaptik.app_7374063084677156101.mp4" type="video/mp4"></source>
-        </video></div>
-   
-    
+    <main><div>
+        <h5>APRESENTAÇÃO!</h5>
+        <p>Olá, pessoal! Nós somos o Clã das Membranas e hoje vamos apresentar nossa biomaket, que representa duas estruturas fundamentais nas células: a membrana plasmática e a parede celular. Nossa ideia foi criar um modelo didático que mostre como essas estruturas funcionam e se diferenciam. A membrana plasmática, como vocês sabem, é a barreira flexível que controla o que entra e sai da célula, enquanto a parede celular é uma camada rígida que oferece suporte e proteção, presente em células vegetais, bactérias e fungos. Vamos mostrar como essas partes são essenciais para a vida e como conseguimos representá-las de forma prática. Esperamos que gostem e que a explicação ajude a fixar melhor o conteúdo!</p></div></main>
 </body>
 </html>

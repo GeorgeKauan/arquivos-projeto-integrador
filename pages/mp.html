@@ -10,18 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap" rel="stylesheet">
     <script src="../js/responsive-navbar.js"></script>
+    <button id="scrollToTop">↑</button>
+    <script>
+        const mybutton = document.getElementById("scrollToTop");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        mybutton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"  
+            });
+        };
+    </script>
 </head>
 <body>
     <header> 
-
-        <h1><a href="../index.html">Página teste</a></h1>
-        <!-- Modificação pra revisar -->
-        <nav id="navbar-desktop">
+        <h1><a href="../index.html">PÁGINA INICIAL</a></h1>
+         <!-- Modificação pra revisar -->
+         <nav id="navbar-desktop">
             <ul class="navbar-links urlista">
-                <li><a href="./mp.html"> MEMBRANA PLÁSMATICA</a></li>
-                <li><a href="./pc.html"> PAREDE CELULAR</a></li>
-                <li><a href="./transportes.html"> TRANSPORTES</a></li>
-                <li><a href="./formacao.html"> FORMAÇÃO</a></li>
+                <li><a href="mp.html"> MEMBRANA PLÁSMATICA</a></li>
+                <li><a href="pc.html"> PAREDE CELULAR</a></li>
             </ul>
         </nav>
         <nav id="navbar-mobile">
@@ -29,21 +45,19 @@
             <button class="toggle-button" onclick="toggleNavbarLinks()">☰</button>
 
             <ul class="navbar-links" id="navbar-links-mobile">
-                <li><a href="./mp.html"> MEMBRANA PLÁSMATICA</a></li>
-                <li><a href="./pc.html"> PAREDE CELULAR</a></li>
-                <li><a href="./transportes.html"> TRANSPORTES</a></li>
-                <li><a href="./formacao.html"> FORMAÇÃO</a></li>
+                <li><a href="mp.html"> MEMBRANA PLÁSMATICA</a></li>
+                <li><a href="pc.html"> PAREDE CELULAR</a></li>
             </ul>
 
         </nav>
-        <!-- Fim da modificação pra revisar -->
-
-        
+        <!-- Fim da modificação pra revisar -->  
     </header>
-    
     <main>
         <h5>MEMBRANA PLASMÁTICA</h5>
-        <p>A membrana plasmática é uma estrutura que delimita as células e torna possíveis as interações moleculares, impedindo a entrada e saída de algumas substâncias e facilitando a passagem de outras. Ela é constituída por um envoltório fino presente em todas as células, composta por uma bicamada fosfolipídica, proteínas e glicídios. Sua estrutura é caracterizada pela sua fluidez e permeabilidade seletiva.</p>
+        <p>A membrana plasmática é uma estrutura que delimita as células e torna possíveis as interações moleculares, impedindo a entrada e saída de algumas substâncias e facilitando a passagem de outras. Ela é constituída por um envoltório fino presente em todas as células, composta por uma bicamada fosfolipídica, proteínas e glicídios. Sua estrutura é caracterizada pela sua fluidez e permeabilidade seletiva.</p><br>
+        <div class="div2"><video width="380" controls> 
+            <source src="../videos/videomp.mov" type="video/mp4"></source>
+          </video></div>
     <h5>FUNÇÕES DA MEMBRANA PLASMÁTICA</h5>
     <h4>BARREIRA SELETIVA:</h4>
     <p>A membrana plasmática separa o interior da célula do ambiente externo, atuando como uma barreira seletiva. Ela controla o que entra e sai da célula, impedindo a entrada de substâncias nocivas e permitindo a passagem de nutrientes essenciais.</p><br>
@@ -64,6 +78,58 @@
     </ul><br>
     <h4>MODELO DE MOSAICO FLUIDO:</h4>
     <p>O modelo de mosaico fluido, proposto por Singer e Nicolson em 1972, descreve a membrana plasmática como uma bicamada lipídica fluida, na qual as proteínas estão dispersas de maneira irregular, como peças de um mosaico. As proteínas podem se mover lateralmente dentro da bicamada, permitindo flexibilidade e adaptabilidade à membrana, enquanto os lipídios também podem se reorganizar, garantindo a fluidez da estrutura.</p>
+
+    <h5>TRANSPORTES</h5>
+
+        <h4>TRANSPORTE PASSIVO</h4>
+        <div>
+            <p> <b>Difusão simples:</b> A difusão simples é o movimento de moléculas de uma região de maior concentração para uma região de menor concentração, até que o equilíbrio seja alcançado. Esse processo ocorre por meio da bicamada lipídica da membrana plasmática, que permite a passagem de pequenas moléculas não polares (lipossolúveis). A difusão simples não exige proteínas ou canais específicos, e as moléculas se movem livremente pela bicamada lipídica.</p> <br>
+            <p> <b>Difusão facilitada:</b> A difusão facilitada é similar à difusão simples, mas, nesse caso, as moléculas não podem atravessar a bicamada lipídica sozinhas (geralmente por serem grandes, polares ou carregadas). Elas utilizam proteínas transportadoras ou canais iônicos na membrana para facilitar seu movimento. As moléculas se movem com o gradiente de concentração (da maior para a menor concentração).</p> <br>
+            <p>
+                <b>Osmose:</b> 
+                A osmose é um tipo específico de difusão da água. A água se move através da membrana plasmática para equilibrar as concentrações de soluto nos dois lados da membrana. Ela se move da região com menor concentração de soluto (mais diluída) para a região com maior concentração de soluto (mais concentrada). A água passa por canais especializados chamados <b>aquaporinas</b>.
+            </p> <br>
+        </div>
+        <div>
+            <h4>TRANSPORTE ATIVO</h4>
+            <p>O transporte ativo requer o gasto de energia, pois as substâncias são transportadas contra o seu gradiente de concentração (da região de menor para a região de maior concentração). Esse tipo de transporte utiliza proteínas de transporte chamadas bombas e consome energia (ATP).</p> <br>
+
+            <p><b>Bomba de Sódio e Potássio (Na+/K+):</b>
+                A bomba Na+/K+ é uma das bombas mais importantes nas células animais. Ela transporta três íons de sódio (Na+) para fora da célula e dois íons de potássio (K+) para dentro da célula, contra seus gradientes de concentração. Esse processo é vital para várias funções celulares, como a manutenção do potencial de membrana e a transmissão de impulsos nervosos.
+                
+                Esse transporte consome energia proveniente de ATP e mantém a concentração de sódio alta fora da célula e a concentração de potássio alta dentro da célula.</p> <br>
+            <p><b>Endocitose:</b>
+                A endocitose é o processo pelo qual a célula captura substâncias do ambiente externo, englobando-as em vesículas formadas pela membrana plasmática. Existem dois tipos principais de endocitose:
+                <p style="text-indent: 50px;">
+                    <b>Fagocitose</b>: A célula "engole" grandes partículas sólidas, como microrganismos ou detritos celulares. Esse processo é realizado principalmente por células do sistema imune, como os macrófagos.
+                </p>
+               <p style="text-indent: 50px;">
+                <b>Pinocitose:</b> A célula "engole" fluidos extracelulares e pequenas moléculas dissolvidas. Esse processo é comum em muitas células e serve para a absorção de nutrientes.</p>
+               </p>
+            <p> <br>
+                <b>Exocitose:</b>A exocitose é o processo inverso da endocitose, onde substâncias dentro da célula são transportadas para fora através da fusão de vesículas com a membrana plasmática. Esse processo é utilizado para liberação de neurotransmissores, secreção de hormônios e eliminação de resíduos celulares.</p>               
+        </div>
+        <h5>FORMAÇÃO DA MEMBRANA PLASMÁTICA</h5>
+        <p>A membrana plasmática é uma estrutura fundamental em células eucariotas e procariotas, que serve para delimitar a célula, controlar a troca de substâncias com o ambiente externo e manter a integridade e o funcionamento celular. Ela é formada principalmente por uma bicamada lipídica, composta por moléculas de fosfolipídios, e inclui proteínas e carboidratos que desempenham funções vitais. Conforme a ilustração a seguir.</p>
+        <div>
+            <div class="div1"> <img src="../imagens/membranaplasmatica - Copia-Photoroom.png" alt="">
+            </div>   
+            <h4>FUNÇÃO DOS FOSFOLIPÍDEOS</h4>
+            <p>Os fosfolipídios são as moléculas principais que formam a estrutura da membrana. Cada fosfolipídio possui uma "cabeça" hidrofílica (que gosta de água) e duas "caudas" hidrofóbicas (que repelem a água). Em condições aquosas, os fosfolipídios se organizam espontaneamente, com as cabeças hidrofílicas voltadas para o meio aquoso, e as caudas hidrofóbicas se orientam para o interior da membrana, criando uma bicamada lipídica.</p> <br>
+            <div class="div1"> <img src="../imagens/bicamada-fosfolipidica-Photoroom.png" alt=""></div>
+            <h4>FUNÇÃO DAS PROTEÍNAS</h4>
+            <p>Dentro da bicamada lipídica, encontram-se as proteínas que podem ser integradas ou periféricas. As proteínas integrais atravessam a bicamada e são importantes para o transporte de substâncias, enquanto as proteínas periféricas ficam na superfície da membrana, desempenhando funções de sinalização, suporte estrutural e adesão celular.</p>
+            <h4>FUNÇÃO DOS CARBOIDRATOS</h4>
+            <p>Carboidratos estão frequentemente ligados a lipídios (formando glicolipídios) ou a proteínas (formando glicoproteínas). Eles estão localizados na parte externa da membrana e estão envolvidos em processos de reconhecimento celular e comunicação entre as células.</p>
+            <h4>FUNÇÃO DAS GLICOPROTEÍNAS</h4>
+            <p>Uma de suas principais funções é no controle de reconhecimento entre as células , possibilitando o mecanismo de identificação de uma célula a outra. Por outro lado também possuem a capacidade de adesão entre células , tal conduta coopera na constituição de tecidos e no monitoramento de sua estrutura. Também atuando como comunicadoras, participando da transmissão de alguns sinais químicos , que funcionam como receptores de moléculas señalizadoras. As glicoproteínas atuam também como protetoras , podendo formar uma camada na superfície denominada glicocálice, possibilitando proteção contra danos químicos , e ataques de microrganismos. Transportadoras de moléculas, ou seja, auxilia na entrada de substâncias específicas.</p>
+            <h4>FUNÇÃO DO GLICOLIPÍDEO</h4>
+            <p>Promove a estabilidade da membrana , contribui na regulação da permeabilidade e o mecanismo de sinalização das células. São fundamentais para comunicação entre células e a inteligibilidade e proteção em determinados ambiente que dispõe de complexidades ambientais biológicas.</p>
+            <h4>FUNÇÃO DO COLESTEROL</h4>
+            <p>Contribui essencialmente na estabilidade e no funcionamento da membrana celular animal, possuindo a particularidade de controlar a fluidez em condições de temperatura, estabilidade da estrutura, reduzir a permeabilidade e, adaptatividade ambiental , portanto é crucial para preservar a integridade, estabilidade e funcionalidade , dispondo que essa célula possa coexistir em diferentes condições ambientais e coordenar suas atividades vitais com eficácia.
+            </p>
+        </div>
+        li
     </main>
 </body>
 </html>

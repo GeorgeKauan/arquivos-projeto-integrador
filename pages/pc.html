@@ -9,23 +9,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <button id="scrollToTop">↑</button>
+    <script>
+        const mybutton = document.getElementById("scrollToTop");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        mybutton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"  
+            });
+        };
+    </script>
 </head>
 <body>
     <header> 
-        <h1><a href="..//index.html">PÁGINA INCIAL</a></h1>
-        <nav>
-            <ul class="urlista">
-                <li><a href="./mp.html"> MEMBRANA PLÁSMATICA</a></li>
-                <li><a href="./pc.html"> PAREDE CELULAR</a></li>
-                <li><a href="./transportes.html"> TRANSPORTES</a></li>
-                <li><a href="./formacao.html"> FORMAÇÃO</a></li>
+        <h1><a href="..//index.html">PÁGINA INICIAL</a></h1>
+         <!-- Modificação pra revisar -->
+         <nav id="navbar-desktop">
+            <ul class="navbar-links urlista">
+                <li><a href="pc.html"> PAREDE CELULAR</a></li>
+                <li><a href="mp.html"> MEMBRANA PLÁSMATICA</a></li>
             </ul>
-        </nav>  
+        </nav>
+        <nav id="navbar-mobile">
+            
+            <button class="toggle-button" onclick="toggleNavbarLinks()">☰</button>
+
+            <ul class="navbar-links" id="navbar-links-mobile">
+                <li><a href="mp.html"> MEMBRANA PLÁSMATICA</a></li>
+                <li><a href="pc.html"> PAREDE CELULAR</a></li>
+            </ul>
+
+        </nav>
+        <!-- Fim da modificação pra revisar -->  
     </header>
 
     <main>
         <h5>PAREDE CELULAR</h5>
-    <p>A parede celular é uma estrutura rígida de proteção encontrada em células vegetais, fungos, algas e bactérias. Sendo assim, ela é composta por polissacarídeos, como celulose (nas plantas) e quitina (nos fungos) e confere forma, suporte e proteção à célula. Isso porque a parede celular impede a plasmoptise, controlando a entrada de água e regulando o transporte de substâncias.</p>
+    <p>A parede celular é uma estrutura rígida que envolve as células de organismos como plantas, fungos, algas e algumas bactérias. Ela tem a função de fornecer suporte estrutural e proteção à célula, além de ajudar a manter sua forma. A composição e a estrutura da parede celular podem variar dependendo do tipo de organismo.</p>
+
+    <h5>FUNÇÕES PRINCIPAIS DA PAREDE CELULAR</h5>
+    <h4>Suporte e estrutura:</h4><p>A parede celular mantém a célula em uma forma específica, ajudando a resistir a pressões externas, como a pressão osmótica.
+    </p>
+    <h4>Proteção:</h4><p>Ela atua como uma barreira física contra patógenos e substâncias prejudiciais.</p>
+    <h4>Comunicação celular:</h4><p>A parede celular também pode estar envolvida na comunicação entre células, como ocorre nos plasmodesmos das plantas, que conectam as células adjacentes e permitem a troca de sinais e substâncias.
+    </p>
+    <h5>ESTRUTURA E COMPOSIÇÃO DA PAREDE CELULAR</h5>
+    <h4>PLANTAS:</h4><p><b>Celulose:</b>
+        O principal componente da parede celular vegetal é a celulose, um polissacarídeo formado por longas cadeias de glicose. Ela forma fibras que proporcionam rigidez e resistência.</p>
+    <p><b>Hemicelulose:</b>
+        A hemicelulose é outro polissacarídeo que se entrelaça com a celulose, ajudando a estabilizar a parede celular.</p>
+    <p><b>Pectina:</b>
+        Componente importante na lamela média, que é a camada que conecta as células vegetais entre si.</p>
+    <p><b>Lignina:</b>
+        Em plantas lenhosas, a lignina é incorporada à parede celular para dar mais rigidez e resistência.</p>
+    <h4>FUNGOS:</h4><p>A parede celular dos fungos é composta principalmente por quitina, um polissacarídeo que é diferente da celulose encontrada nas plantas.</p>
+    <h4>BACTÉRIAS</h4>
+    <p>A parede celular das bactérias é composta por peptidoglicano (ou mureína), uma rede complexa de açúcares e proteínas, que confere estrutura e proteção. A parede celular bacteriana pode ser classificada como gram-positiva ou gram-negativa, dependendo da espessura da camada de peptidoglicano e da presença de outras substâncias, como lipídios.</p>
+    <h4>ALGAS</h4>
+    <p>As paredes celulares das algas podem ser compostas por celulose, algina, agarose, ou outros polissacarídeos, dependendo do tipo de alga.</p>
+    <h5>TIPOS DE PAREDE CELULAR</h5>
+    <h4>PRIMÁRIA</h4>
+    <p>Formada enquanto a célula está em crescimento, sendo mais flexível.</p>
+    <h4>SECUNDÁRIA</h4>
+    <p>Formada após o crescimento da célula e é mais espessa e rígida. Encontrada principalmente em células de plantas maduras, como nas madeiras.</p>
+    <h4>LAMELA MÉDIA</h4>
+    <p>Camada fina entre as células vegetais que contém principalmente pectina e as mantém unidas.</p><br>
+    A parede celular é fundamental para a vida das plantas, fungos, algas e algumas bactérias, pois oferece a estrutura necessária para o funcionamento adequado das células e proteção contra danos e microrganismos.
     </main>
 </body>
 </html>
