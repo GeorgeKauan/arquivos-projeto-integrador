@@ -68,9 +68,12 @@ a:hover {
     flex-direction: row;
 }
 
+#header-mobile {
+    display: none;
+}
+
 #navbar-mobile {
     flex-direction: column;
-    display: none;
 }
 
 .navbar-links {
@@ -82,15 +85,16 @@ a:hover {
         font-size: 100px;
     } */
     .navbar-links {
-        display: none;
+        /* display: none; */
         flex-direction: column;
     }
 
-    #navbar-mobile {
+    #header-mobile {
         display: flex;
     }
-    #navbar-desktop {
-    display: none;
+
+    #header-desktop {
+        display: none;
     }
 }
 /* Fim das modificações */
