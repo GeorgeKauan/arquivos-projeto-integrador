@@ -13,6 +13,9 @@
     <script>
         const mybutton = document.getElementById("scrollToTop");
 
+
+
+
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -21,10 +24,13 @@
             }
         };
 
+
+
+
         mybutton.onclick = function() {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth" 
+                behavior: "smooth"
             });
         };
     </script>
@@ -40,11 +46,14 @@
         </ul>
     </nav>
     </header>
-    <header id="header-mobile"> 
+    <header id="header-mobile">
        
         <nav id="navbar-mobile">
-            
+           
             <button class="toggle-button" onclick="toggleNavbarLinks()">☰</button>
+
+
+
 
             <ul class="navbar-links" id="navbar-links-mobile">
                 <li><a href="../index.html">PÁGINA INICIAL</a></li>
@@ -52,17 +61,54 @@
                 <li><a href="pages/pc.html"> PAREDE CELULAR</a></li>
             </ul>
 
+
+
+
         </nav>
         <!-- Fim da modificação pra revisar  -->  
     </header>
 
+
+
+
     <main><div>
         <h5>APRESENTAÇÃO!</h5>
-        <p>Olá, pessoal! Nós somos o Clã das Membranas e hoje vamos apresentar nossa biomaket, que representa duas estruturas fundamentais nas células: a membrana plasmática e a parede celular. Nossa ideia foi criar um modelo didático que mostre como essas estruturas funcionam e se diferenciam. A membrana plasmática, como vocês sabem, é a barreira flexível que controla o que entra e sai da célula, enquanto a parede celular é uma camada rígida que oferece suporte e proteção, presente em células vegetais, bactérias e fungos. Vamos mostrar como essas partes são essenciais para a vida e como conseguimos representá-las de forma prática. Esperamos que gostem e que a explicação ajude a fixar melhor o conteúdo!</p></div></main>
+        <p>Olá, pessoal! Nós somos o Clã das Membranas e hoje vamos apresentar nossa biomaket, que representa duas estruturas fundamentais nas células: a membrana plasmática e a parede celular. Nossa ideia foi criar um modelo didático que mostre como essas estruturas funcionam e se diferenciam. A membrana plasmática, como vocês sabem, é a barreira flexível que controla o que entra e sai da célula, enquanto a parede celular é uma camada rígida que oferece suporte e proteção, presente em células vegetais, bactérias e fungos. Vamos mostrar como essas partes são essenciais para a vida e como conseguimos representá-las de forma prática. Esperamos que gostem e que a explicação ajude a fixar melhor o conteúdo!</p></div> <br>
         <div class="video">
             <iframe src="videos/video.mp4" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        </div>
+        </div><br>
+        <div id="grupo-container">
+            <h1 class="grupo-titulo">Componentes do Grupo</h1>
+            <ul class="grupo-lista">
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/3EADDABD-30AB-41E9-91E2-B85D9D0AF1A8.jpg" alt="Foto de Caio">
+                <span class="grupo-nome">Caio Targino</span>
+              </li>
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/73aeec1b-8e28-41b2-a856-092d1ba436ce.jpg" alt="Foto de George">
+                <span class="grupo-nome">George Kauan</span>
+              </li>
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/C3A9E5B7-9189-40D4-80CB-02D6B92EB665.jpg" alt="Foto de Lilyanni">
+                <span class="grupo-nome">Lilyanni Tathiely</span>
+              </li>
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/IMG_3170 (1).PNG" alt="Foto de Lucas">
+                <span class="grupo-nome">Lucas Dantas</span>
+              </li>
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/A729CF19-6AE2-40F6-B116-A79B4D107E45.jpg" alt="Foto de Eloyza">
+                <span class="grupo-nome">Maria Eloyza</span>
+              </li>
+              <li class="grupo-item">
+                <img class="grupo-foto" src="./imagens/4babd5f8-693c-4522-b45d-183259530aad (1).jpg" alt="Foto de Zilene">
+                <span class="grupo-nome">Zilene de Oliveira</span>
+              </li>
+            </ul>
+          </div>
+       
+    </main>
 </body>
 </html>
