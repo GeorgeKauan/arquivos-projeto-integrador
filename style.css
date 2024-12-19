@@ -93,10 +93,14 @@ a:hover {
     height: auto;
 }
 
+.imgPC{
+    width: 30%;
+}
+
 @media(width < 1060px){
-    /* li {
-        font-size: 100px;
-    } */
+    .imgPC {
+        width: 70%
+    }
     .navbar-links {
         /* display: none; */
         flex-direction: column;
@@ -117,9 +121,7 @@ h3{
     margin-top: 60px;
     color: #004a68;
 }
-.imgPC{
-    width: 70%;
-}
+
 video {
     width: 70%;
 }
